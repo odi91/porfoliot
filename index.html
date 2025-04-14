@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IgoTech - Agence Digitale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="porfoliot.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">IgoTech</a>
+        <nav class="nav-links">
+            <a href="#accueil">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#projets">Projets</a>
+            <a href="#temoignages">Témoignages</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="accueil">
+        <video autoplay muted loop id="bg-video">
+            <source src="C.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 class="hero-text">Bienvenue sur IgoTech</h1>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Nos Services</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel">
+                <div class="service-box">
+                    <img src="R (1).jpg" alt="Service 1">
+                    <p>Nous offrons des services dans le domaine de création des sites web avec les meilleurs designers
+                        spécialisés dans ce domaine et avec un prix incroyablement à vos profits.</p>
+                </div>
+                <div class="service-box">
+                    <img src="R (2).jpg" alt="Service 2">
+                    <p>En plus de service de création des sites web nous offrons aussi des services de gestions de
+                        réseaux sociaux avec la même promotion de prix et de garantie à vos profits.</p>
+                </div>
+                <div class="service-box">
+                    <img src="R.jpg" alt="Service 3">
+                    <p>Les contenus visuel sont très important pour des publicités des entreprises;En effet une bonne
+                        qualité visuel dans n'import quel domaine augmente les chances pour booster une entité ou une
+                        entreprise.</p>
+                </div>
+                <div class="service-box">
+                    <img src="A.jpg" alt="Service 4">
+                    <p>Pour une entreprise faire du marketing augmente la clientelle, la question que nous nous posons
+                        est de savoir comment faire un bon campage de marketing digital pour vous aidez? n'hesites plus
+                        contactez-nous pour un bon travail.</p>
+                </div>
+
+            </div>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>Nos Projets</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn-projets"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel projets-carousel">
+                <div class="projet-box">
+                    <img src="t.jpg" alt="Projet 1">
+                    <p> Application de gestion des tâches.</p>
+                </div>
+                <div class="projet-box">
+                    <img src="o.jpg" alt="Projet 2">
+                    <p> Site e-commerce pour une boutique.</p>
+                </div>
+                <div class="projet-box">
+                    <img src="s.webp" alt="Projet 3">
+                    <p> Plateforme de réservation en ligne.</p>
+                </div>
+                <div class="projet-box">
+                    <img src="p.jpg" alt="Projet 4">
+                    <p> Blog personnel avec CMS intégré.</p>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn-projets"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="temoignages">
+        <h2>Témoignages</h2>
+        <div class="temoignages-container">
+            <div class="temoignage">
+                <img src="l.jpg" alt="Témoignage 1">
+                <p>Service exceptionnel, je recommande vivement !</p>
+            </div>
+            <div class="temoignage">
+                <img src="c.jpg" alt="Témoignage 2">
+                <p>Une équipe très professionnelle et à l'écoute.</p>
+            </div>
+            <div class="temoignage">
+                <img src="b.jpg" alt="Témoignage 3">
+                <p>Le design de mon site web est magnifique, merci !</p>
+            </div>
+            <div class="temoignage">
+                <img src="f.jpg" alt="Témoignage 4">
+                <p>Un service rapide et efficace, je suis satisfait.</p>
+            </div>
+            <div class="temoignage">
+                <img src="l.jpg" alt="Témoignage 5">
+                <p>Ils ont boosté ma présence sur les réseaux sociaux.</p>
+            </div>
+            <div class="temoignage">
+                <img src="c.jpg" alt="Témoignage 6">
+                <p>Leur expertise en marketing digital est impressionnante.</p>
+            </div>
+            <div class="temoignage">
+                <img src="b.jpg" alt="Témoignage 7">
+                <p>Un excellent rapport qualité-prix, je recommande.</p>
+            </div>
+            <div class="temoignage">
+                <img src="l.jpg" alt="Témoignage 8">
+                <p>Merci pour votre créativité et votre professionnalisme.</p>
+            </div>
+            <div class="temoignage">
+                <img src="f.jpg" alt="Témoignage 9">
+                <p>Mon entreprise a gagné en visibilité grâce à eux.</p>
+            </div>
+            <div class="temoignage">
+                <img src="c.jpg" alt="Témoignage 10">
+                <p>Une équipe talentueuse et dévouée, bravo !</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="form-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>Suivez-nous sur :</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 IgoTech. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="porfoliot.js"></script>
+</body>
+
+</html>
