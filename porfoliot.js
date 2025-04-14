@@ -67,4 +67,30 @@ document.addEventListener('DOMContentLoaded', () => {
         currentProjetIndex = (currentProjetIndex < projetBoxes.length - 1) ? currentProjetIndex + 1 : 0;
         updateProjetsCarousel();
     }, 100000); // 5 seconds interval
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+    // Toggle sidebar visibility
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        menuToggle.classList.toggle('active'); // Change icon state
+    });
+
+    // Close sidebar when a link is clicked
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    // Close sidebar when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
 });
