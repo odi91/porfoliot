@@ -48,7 +48,7 @@ header {
 
 .hero {
     position: relative;
-    width: 100%;
+    width: 124%;
     height: 100vh;
     overflow: hidden;
 }
@@ -399,17 +399,305 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menu-toggle.active i {
+    transform: rotate(90deg);
+    /* Rotate icon when active */
+    transition: transform 0.3s ease;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+    display: block;
+    transform: translateX(0);
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #e64a19;
+}
+
+@media (max-width: 1024px) {
     header {
-        padding: 20px 30px;
+        padding: 15px 30px;
     }
 
     .nav-links {
-        gap: 20px;
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-text {
+        font-size: 3em;
+    }
+
+    .service-box img,
+    .projet-box img,
+    .temoignage img {
+        display: block;
+        margin: 0 auto;
+        /* Center horizontally */
+        width: 90%;
+        /* Adjust width for responsiveness */
+        height: auto;
+    }
+
+    .service-box p,
+    .projet-box p,
+    .temoignage p {
+        text-align: center;
+        /* Ensure text is centered */
+        font-size: 0.8em;
+        /* Adjust text size */
+    }
+
+    .form-container {
+        max-width: 250px;
+    }
+
+    .contact-form button {
+        font-size: 0.8em;
+    }
+
+    body {
+        padding: 0 10px;
+        /* Add padding for better spacing */
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+        /* Center carousel content */
+    }
+
+    .service-box,
+    .projet-box {
+        margin: 20px auto;
+        /* Add spacing between boxes */
+        max-width: 90%;
+        /* Adjust width for responsiveness */
+    }
+
+    .temoignages-container {
+        flex-direction: column;
+        /* Stack testimonials vertically */
+        align-items: center;
+    }
+
+    .temoignage {
+        margin-bottom: 20px;
+        max-width: 90%;
+        /* Adjust width for responsiveness */
+    }
+
+    .form-container {
+        max-width: 90%;
+        /* Adjust form width */
+        margin: 20px auto;
+        /* Center the form */
+    }
+
+    footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .hero-text {
         font-size: 2.5em;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+        /* Center carousel content */
+    }
+
+    .service-box img,
+    .projet-box img,
+    .temoignage img {
+        width: 100%;
+        /* Make images take full width */
+        height: auto;
+    }
+
+    .service-box p,
+    .projet-box p,
+    .temoignage p {
+        font-size: 0.7em;
+        /* Reduce text size further */
+    }
+
+    #services {
+        background: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 130%;
+    }
+
+    #projets {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 130%;
+    }
+
+    #temoignages h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1em;
+        color: #333;
+        position: relative;
+        bottom: 1056px;
+    }
+
+    .form-container {
+        max-width: 100%;
+        margin: 15px auto;
+        POSITION: relative;
+        RIGHT: 88px;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .temoignage img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .temoignage p {
+        font-size: 0.7em;
+    }
+
+    footer {
+        padding: 15px 5px;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+    }
+
+
+    .contact-form button {
+        font-size: 0.8em;
+        /* Adjust button font size */
+    }
+
+    body {
+        padding: 0 5px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box,
+    .projet-box {
+        margin: 15px auto;
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    .temoignages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temoignage {
+        margin-bottom: 15px;
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    #contact {
+        background: #000;
+        color: #fff;
+        padding: 50px 20px;
+        WIDTH: 127%;
+        text-align: center;
+    }
+
+    #contact h2 {
+        margin-bottom: 30px;
+        font-size: 2em;
+        color: #fff;
+        POSITION: relative;
+        BOTTOM: 323px;
+        LEFT: 160px;
+    }
+
+
+    footer {
+        padding: 15px 5px;
+    }
+
+    footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 10px;
+        margin-top: 50px;
+        WIDTH: 126%;
     }
 }
 
